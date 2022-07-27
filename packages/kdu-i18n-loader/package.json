@@ -1,0 +1,45 @@
+{
+  "name": "@kdu-i18n/kdu-i18n-loader",
+  "description": "kdu-i18n for webpack loader",
+  "version": "3.0.0-rc.0",
+  "author": "NKDuy",
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/kdu-bundle-tools/issues"
+  },
+  "dependencies": {
+    "@kdu-i18n/bundle-utils": "^0.2.0-rc.0",
+    "@kdu-i18n/shared": "^9.1.10-beta.0",
+    "loader-utils": "^2.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 12"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/khanhduy1407/kdu-bundle-tools/blob/main/packages/kdu-i18n-loader/README.md",
+  "keywords": [
+    "i18n",
+    "loader",
+    "kdu",
+    "webpack"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "peerDependencies": {
+    "kdu": "^3.1.5-alpha.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhduy1407/kdu-bundle-tools.git",
+    "directory": "packages/kdu-i18n-loader"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "tsc -p . --watch",
+    "clean": "npm-run-all clean:*",
+    "clean:lib": "rm -rf ./lib",
+    "release": "esmo ../../scripts/release.ts"
+  }
+}

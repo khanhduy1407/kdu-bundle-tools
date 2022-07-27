@@ -1,0 +1,41 @@
+{
+  "name": "@kdu-i18n/bundle-utils",
+  "description": "Bundle utilities for Kdu I18n project",
+  "version": "0.2.0-rc.0",
+  "author": "NKDuy",
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/kdu-bundle-tools/issues"
+  },
+  "dependencies": {
+    "@kdu-i18n/core": "^9.1.10-beta.0",
+    "@kdu-i18n/message-compiler": "^9.1.10-beta.0",
+    "@kdu-i18n/shared": "^9.1.10-beta.0",
+    "jsonc-eslint-parser": "^1.0.1",
+    "source-map": "^0.6.1",
+    "yaml-eslint-parser": "^0.3.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 12"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/khanhduy1407/kdu-bundle-tools/blob/main/packages/bundle-utils/README.md",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "peerDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhduy1407/kdu-bundle-tools.git",
+    "directory": "packages/bundle-utils"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "npm-run-all clean:*",
+    "clean:lib": "rm -rf ./lib",
+    "watch": "tsc -p . --watch",
+    "release": "esmo ../../scripts/release.ts"
+  },
+  "types": "lib/index.d.ts"
+}

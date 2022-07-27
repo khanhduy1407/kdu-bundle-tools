@@ -1,0 +1,6 @@
+jest.config.js
+packages/**/test/fixtures
+
+packages/kdu-i18n-loader/@types/*.d.ts
+packages/**/lib/*.d.ts
+packages/**/lib/*.js

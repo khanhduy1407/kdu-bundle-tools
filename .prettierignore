@@ -1,0 +1,5 @@
+packages/**/lib
+coverage
+tsconfig.json
+dist
+packages/**/examples/dist
