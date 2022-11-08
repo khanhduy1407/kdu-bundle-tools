@@ -9,7 +9,7 @@
   "dependencies": {
     "@kdu-i18n/bundle-utils": "^0.2.0-rc.0",
     "@kdu-i18n/shared": "^9.1.10-beta.0",
-    "loader-utils": "^2.0.0"
+    "loader-utils": "^2.0.3"
   },
   "devDependencies": {},
   "engines": {
