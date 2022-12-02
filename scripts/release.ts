@@ -83,19 +83,6 @@ async function releasePackage(log: Logger) {
     console.log(`(skipped)`)
   }
 
-  log('Generating changelog...')
-  let changelog: string | null = null
-  if (!skipChangelog) {
-    changelog = await renderChangelog(fromTag, releaseVersion, pkgName)
-    if (!isDryRun) {
-      await writeChangelog(pkgDir, changelog, targetVersion)
-    } else {
-      console.log(`changelog: ${changelog}`)
-    }
-  } else {
-    console.log(`(skipped)`)
-  }
-
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' })
   if (stdout) {
     log('Committing changes...')

@@ -1,7 +1,7 @@
 {
   "name": "@kdu-i18n/bundle-utils",
   "description": "Bundle utilities for Kdu I18n project",
-  "version": "0.2.0-rc.0",
+  "version": "1.0.0",
   "author": "NKDuy",
   "bugs": {
     "url": "https://github.com/khanhduy1407/kdu-bundle-tools/issues"
@@ -35,7 +35,7 @@
     "clean": "npm-run-all clean:*",
     "clean:lib": "rm -rf ./lib",
     "watch": "tsc -p . --watch",
-    "release": "esmo ../../scripts/release.ts"
+    "release": "esno ../../scripts/release.ts"
   },
   "types": "lib/index.d.ts"
 }

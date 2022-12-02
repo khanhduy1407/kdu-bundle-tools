@@ -82,6 +82,18 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@kdu-i18n/bundle-utils@^0.2.0-rc.0":
+  version "0.2.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@kdu-i18n/bundle-utils/-/bundle-utils-0.2.0-rc.0.tgz#eee2382194374567e0e039c34843bcbdc2d0aeaa"
+  integrity sha512-MGptOjOoeyRt/qaN8ZKp9rOb7vQzfdkA8LL8gcZnJWKT2q43mkAiFbuQc5LHtM0rFrAFftxlNi8qN9lxR5UamQ==
+  dependencies:
+    "@kdu-i18n/core" "^9.1.10-beta.0"
+    "@kdu-i18n/message-compiler" "^9.1.10-beta.0"
+    "@kdu-i18n/shared" "^9.1.10-beta.0"
+    jsonc-eslint-parser "^1.0.1"
+    source-map "^0.6.1"
+    yaml-eslint-parser "^0.3.2"
+
 "@kdu-i18n/core-base@9.1.10-beta.0":
   version "9.1.10-beta.0"
   resolved "https://registry.yarnpkg.com/@kdu-i18n/core-base/-/core-base-9.1.10-beta.0.tgz#e0dea4d05703f373725da184d74ddf2e6e5dd062"
