@@ -1,0 +1,48 @@
+{
+  "name": "@kdu-i18n/wite-plugin-kdu-i18n",
+  "description": "wite plugin for Kdu I18n",
+  "version": "2.5.0",
+  "author": "NKDuy",
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/kdu-bundle-tools/issues"
+  },
+  "dependencies": {
+    "@kdu-i18n/bundle-utils": "^1.0.0",
+    "@kdu-i18n/shared": "^9.1.10-beta.0",
+    "@rollup/pluginutils": "^4.1.0",
+    "debug": "^4.3.1",
+    "fast-glob": "^3.2.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 12"
+  },
+  "files": [
+    "lib",
+    "client.d.ts"
+  ],
+  "homepage": "https://github.com/khanhduy1407/kdu-bundle-tools/blob/main/packages/wite-plugin-kdu-i18n/README.md",
+  "keywords": [
+    "i18n",
+    "plugin",
+    "wite",
+    "witejs",
+    "kdu",
+    "kdu-i18n"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhduy1407/kdu-bundle-tools.git",
+    "directory": "packages/wite-plugin-kdu-i18n"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "npm-run-all clean:*",
+    "clean:lib": "rm -rf ./lib",
+    "watch": "tsc -p . --watch",
+    "release": "esno ../../scripts/release.ts"
+  },
+  "types": "lib/index.d.ts"
+}

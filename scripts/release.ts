@@ -13,9 +13,7 @@ import {
   getRepoName,
   getTags,
   getIncrementer,
-  getTargetVersion,
-  renderChangelog,
-  writeChangelog
+  getTargetVersion
 } from './utils'
 import { execute } from './runner'
 
@@ -100,19 +98,6 @@ async function releasePackage(log: Logger) {
   await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`])
   await runIfNotDry('git', ['push'])
 
-  const repo = await getRepoName()
-  log(`Releasing to ${repo} of GitHub Releases...`)
-  if (!skipChangelog && !isDryRun) {
-    await releaseGitHub(
-      tag,
-      releaseVersion,
-      changelog,
-      isPrelease(targetVersion)
-    )
-  } else {
-    console.log(`(skipped)`)
-  }
-
   if (isDryRun) {
     console.log(`Dry run finished - run git diff to see package changes.`)
   }
@@ -162,37 +147,6 @@ async function publishPackage(version: string, pkgName: string, runIfNotDry) {
       throw e
     }
   }
-}
-
-function isPrelease(version: string) {
-  return (
-    version.includes('beta') ||
-    version.includes('alpha') ||
-    version.includes('rc')
-  )
-}
-
-async function releaseGitHub(
-  tag: string,
-  releaseName: string,
-  content = '',
-  prerelease = false
-) {
-  const octokit = new Octokit({
-    auth: process.env.GITHUB_AUTH || ''
-  })
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { data: user } = await octokit.request('GET /user')
-  const repo = await getRepoName()
-
-  return await octokit.repos.createRelease({
-    owner: 'khanhduy1407',
-    repo,
-    tag_name: tag,
-    name: releaseName,
-    body: content,
-    prerelease
-  })
 }
 
 async function main(): Promise<void> {
